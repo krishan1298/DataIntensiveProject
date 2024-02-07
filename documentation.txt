@@ -19,3 +19,13 @@ awk -F ',' 'NR>=1 {print $8 "," $11}' EV_Pop_Data.csv >> process.csv
 
 This stored columns 8 and 11 (EV Model and Range) into a new csv called
 process.csv
+
+I used this command to run my analysis:
+
+awk -F ',' 'NR > 1 {count[$1]++} END {for (Model in count) print Model "," count[Model]}' process.csv > completed.csv
+
+This command allows me to get the count of each model and then create a new csv file
+with the model name and number of counts. Based on the analysis, this supports
+my hypothesis that the majority of people prefer the range over luxury and performance.
+Tesla Model Y and 3 have the highest number of counts and have the highest ranges.
+Model Y gets around 291 miles of range meanwhile the Model 3 gets anywhere between 215 and 322 miles of range.
