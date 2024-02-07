@@ -2,5 +2,13 @@ My data set is called EV Population data. It contains information about
 the vehicle, such as the VIN, where it is, make, model, EV type, range,
 and other types of information. The hypothesis I will be proving/disproving
 is whether consumers prioritize EV range over luxury and performance. To
-do this, I will gather the total number of consumers for each model and
-create a horizontal bar graph. Python will most likely be used to do this.
+do this, I will gather the total number of consumers for each model. I will
+also add an extra label that would include the vehicle range to test the 
+hypothesis. 
+
+I used this command to extract the Model and Electric range of the
+EV_Pop_Data.csv:
+
+head -n 1 EV_Pop_Data.csv | cut -d ',' -f 8,11 EV_Pop_Data.csv > process.csv
+
+This created a new csv file with the columns I will use to test my hypothesis.
