@@ -9,6 +9,13 @@ hypothesis.
 I used this command to extract the Model and Electric range of the
 EV_Pop_Data.csv:
 
-head -n 1 EV_Pop_Data.csv | cut -d ',' -f 8,11 EV_Pop_Data.csv > process.csv
+head -n 1 EV_Pop_Data.csv | cut -d ',' -f 8,11 EV_Pop_Data.csv
 
-This created a new csv file with the columns I will use to test my hypothesis.
+This printed out the headers and all rows for its respected column.
+
+I used this command to create a new csv based on the columns I want to process:
+
+awk -F ',' 'NR>=1 {print $8 "," $11}' EV_Pop_Data.csv >> process.csv
+
+This stored columns 8 and 11 (EV Model and Range) into a new csv called
+process.csv
