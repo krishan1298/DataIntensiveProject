@@ -22,7 +22,10 @@ I used this command to run my analysis:
 
 awk -F ',' 'NR > 1 {count[$1]++; if ($2 > max_range[$1]) max_range[$1] = $2} END {for (model in count) print model "," count[model] "," (max_range[model] ? max_range[model] : 0)}' process.csv | sort -t ',' -k2,2nr > completed.csv
 
-This command allows me to get the count of each model and then create a new csv file with the model name and number of counts. Additionally, it'll show the range of each model. This will also be sorted from greatest number of counts to least.
+This command allows me to get the count of each model and then create a new csv 
+file with the model name and number of counts. Additionally, it'll show the 
+range of each model. This will also be sorted from greatest number of counts 
+to least.
 
 awk 'BEGIN {print "model,count,range"} {print}' completed.csv > temp_file && mv temp_file completed.csv   
 
@@ -30,5 +33,7 @@ This command adds headers to the completed.csv.
 
 head -n 5 completed.csv
 
-This command will show the first 5 entries in the completed.csv. Based on my analysis, most people prefer having an EV with higher range. Model Y and Model 3 scored the highest number of counts and they have the highest ranges.
+This command will show the first 5 entries in the completed.csv. Based on my 
+analysis, most people prefer having an EV with higher range. Model Y and 
+Model 3 scored the highest number of counts and they have the highest ranges.
 
