@@ -41,5 +41,14 @@ Model 3 scored the highest number of counts and they have the highest ranges.
 -------------------------------------------------------------------------------------------
 Hadoop
 
-I used Hadoop to perform a similar data analysis as command line. In my Mapper, I split my csv file by comma and added the model and range to the output collector. It would treat them as key value pairs. In my Reducer, I had a count that would increment as long as the iterator for each model had a line. This returns the number occurrences for each vehicle. Additionally, I got the maximum range for each vehicle as the range does vary a bit for the same models due to different manufacturing years. However, I kept making a new jar files and IntelliJ does not like to give me an updated jar version where I included the range in my output directory, so unfortunately I was not able to display the range of each vehicle.
+I used Hadoop to perform a similar data analysis as command line. In my Mapper,
+I split my csv file by comma and added the model and range to the output 
+collector. It would treat them as key value pairs. In my Reducer, I had a 
+count that would increment as long as the iterator for each model had a line. 
+This returns the number occurrences for each vehicle. Additionally, I got the 
+maximum range for each vehicle as the range does vary a bit for the same models
+due to different manufacturing years. However, I kept making a new jar files 
+and IntelliJ does not like to give me an updated jar version where I included 
+the range in my output directory, so unfortunately I was not able to display 
+the range of each vehicle.
 
