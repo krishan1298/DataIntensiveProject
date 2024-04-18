@@ -50,5 +50,9 @@ maximum range for each vehicle as the range does vary a bit for the same models
 due to different manufacturing years. However, I kept making a new jar files 
 and IntelliJ does not like to give me an updated jar version where I included 
 the range in my output directory, so unfortunately I was not able to display 
-the range of each vehicle.
+the range of each vehicle. However, I did get similar findings. Tesla models
+have the highest number of counts. Given that I am manipulating the same
+dataset, the ranges for each vehicle are the same. The Model 3 and Model Y
+have the highest range which does support my hypothesis that people choose EVs
+for saving costs on gas and for convenience.
 
